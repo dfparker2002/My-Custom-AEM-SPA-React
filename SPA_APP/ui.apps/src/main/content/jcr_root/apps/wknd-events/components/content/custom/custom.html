@@ -1,0 +1,11 @@
+<sly data-sly-test.empty="${!properties.customTitle}"/>
+<!--/* Show placeholder when authorname is not authored*/-->
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"/>
+<sly data-sly-call="${template.placeholder @ isEmpty=empty}"></sly>
+
+<sly data-sly-test="${!empty}" data-sly-use.custom="com.adobe.aem.guides.wkndevents.core.models.CustomModel">
+  <div className="Custom">
+    <h1>${currentPage.title}</h1>
+    ${custom.customTitle}
+  </div>
+</sly>
