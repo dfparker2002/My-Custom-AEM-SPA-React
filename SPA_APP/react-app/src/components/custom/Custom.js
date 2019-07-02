@@ -14,7 +14,7 @@ const CustomConfig = {
 export default class Custom extends Component {
     render() {
         return (<div className="Custom">
-                {this.props.customTitle}
+               <h1> {this.props.customTitle} </h1>
             </div>);
     }
 }
