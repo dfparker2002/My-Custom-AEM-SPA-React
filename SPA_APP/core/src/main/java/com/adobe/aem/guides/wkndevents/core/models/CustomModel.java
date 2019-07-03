@@ -4,6 +4,7 @@ import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -22,9 +23,9 @@ public class CustomModel implements ComponentExporter {
   protected static final String RESOURCE_TYPE = "/apps/wknd-events/components/content/custom";
 
   @ValueMapValue(name = "customTitle")
-  @Default(values="Hey There")
   private String customTitle;
 
+  @Nullable
   public String getCustomTitle() {
     return customTitle;
   }

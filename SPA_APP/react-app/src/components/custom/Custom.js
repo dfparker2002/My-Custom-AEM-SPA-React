@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {MapTo} from '@adobe/cq-react-editable-components';
-require('./Custom.scss');
 
 const CustomConfig = {
 
@@ -13,9 +12,9 @@ const CustomConfig = {
 
 export default class Custom extends Component {
     render() {
-        return (<div className="Custom">
-                {this.props.customTitle}
-            </div>);
+    if (this.props.customTitle) {
+        return (<div className="custom"> <b> {this.props.customTitle}</b> </div>);
+        }
     }
 }
 
