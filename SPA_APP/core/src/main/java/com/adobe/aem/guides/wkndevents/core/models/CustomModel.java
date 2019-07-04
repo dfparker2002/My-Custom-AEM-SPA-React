@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
@@ -14,13 +13,14 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = Resource.class,
     resourceType = CustomModel.RESOURCE_TYPE,
+    adapters = {CustomModel.class, ComponentExporter.class},
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
     extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 @JsonSerialize(as = CustomModel.class)
 public class CustomModel implements ComponentExporter {
 
-  protected static final String RESOURCE_TYPE = "/apps/wknd-events/components/content/custom";
+  protected static final String RESOURCE_TYPE = "wknd-events/components/content/custom";
 
   @ValueMapValue(name = "customTitle")
   private String customTitle;
@@ -29,6 +29,7 @@ public class CustomModel implements ComponentExporter {
   public String getCustomTitle() {
     return customTitle;
   }
+
 
   @Nonnull
   @Override
