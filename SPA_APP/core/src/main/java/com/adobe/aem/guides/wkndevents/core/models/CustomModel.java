@@ -17,7 +17,6 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
     extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-@JsonSerialize(as = CustomModel.class)
 public class CustomModel implements ComponentExporter {
 
   protected static final String RESOURCE_TYPE = "wknd-events/components/content/custom";
