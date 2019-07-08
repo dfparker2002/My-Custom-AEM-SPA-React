@@ -6,6 +6,5 @@ require('./page/Page');
 require('./text/Text');
 require('./image/Image');
 require('./list/List');
-require('./custom/Custom');
 require('./weather/Weather');
 require('./title/Title');

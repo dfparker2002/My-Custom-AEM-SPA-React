@@ -3,7 +3,6 @@ package com.adobe.aem.guides.wkndevents.core.models;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.day.cq.wcm.api.Page;
-import com.drew.lang.StringUtil;
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
 import org.apache.commons.lang3.StringUtils;
@@ -28,15 +27,10 @@ public class TitleModel implements ComponentExporter {
   @ValueMapValue(name = "jcr:title")
   private String title;
 
-  @ValueMapValue
-  private String linkURL;
 
   @ValueMapValue
   private String type;
 
-  public String getLinkURL() {
-    return linkURL;
-  }
 
   public String getType() {
     return type;
