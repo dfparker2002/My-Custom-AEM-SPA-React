@@ -4,15 +4,15 @@ import {MapTo} from '@adobe/cq-react-editable-components';
 export default class Title extends Component {
     get headingType(){
         if(!this.props.type){
-          return 'h2';
+          return 'h1';
         }else{
-          return this.prop.type;
+          return this.props.type;
         }
     }
 
     render() {
           const htmlDom = React.createElement(this.headingType, {}, this.props.title);
-            return <div className="Title-class">{htmlDom} </div>
+            return <div className="Title-class">{htmlDom} </div>;
     }
 }
 

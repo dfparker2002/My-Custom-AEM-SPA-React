@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { withRouter } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Time from '../../components/time/Time';
 import './Header.scss';
 require('../../utils/Icons');
 
@@ -25,6 +26,7 @@ class Header extends Component {
             <header className="Header">
                 <div className="Header-wrapper">
                     <h1 className="Header-title">WKND<span className="Header-title--inverse">_</span></h1>
+                    <Time/>
                     <div className="Header-tools">
                         { this.homeLink }
                    </div>

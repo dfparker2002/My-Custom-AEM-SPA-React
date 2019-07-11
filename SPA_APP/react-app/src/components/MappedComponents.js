@@ -8,3 +8,4 @@ require('./image/Image');
 require('./list/List');
 require('./weather/Weather');
 require('./title/Title');
+require('./time/Time');
